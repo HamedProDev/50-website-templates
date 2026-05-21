@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamed Hussein — Software Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <nav>
+    <div class="nav-brand">HX</div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-toggle">&#9776;</div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-glitch">
+        <h1 class="glitch" data-text="HAMED HUSSEIN">HAMED HUSSEIN</h1>
+      </div>
+      <h2 class="hero-subtitle">Software Developer</h2>
+      <p class="hero-desc">I craft digital experiences that blend code with art —<br>turning complex problems into elegant, impactful solutions.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2>About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm <strong>Hamed Hussein</strong>, a passionate <strong>Software Developer</strong> with a deep love for building things that live on the web. From pixel-perfect frontends to robust backend systems, I bring ideas to life through clean, efficient code.</p>
+        <p>With a background in <strong>Software Development</strong>, I specialize in creating modern web applications that are not only functional but also visually stunning. Every project I take on is driven by a commitment to quality, performance, and user experience.</p>
+        <p>When I'm not coding, you'll find me exploring new technologies, contributing to open source, or sketching out my next big idea.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><span class="stat-num" data-target="10">0</span><span class="stat-label">Projects Done</span></div>
+        <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">Technologies</span></div>
+        <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-label">% Dedication</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2>Featured Projects</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" data-tilt>
+        <div class="project-image" style="background: linear-gradient(135deg, #0f0, #006400);">
+          <div class="project-overlay">
+            <span class="project-icon">&#128690;</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Cykel Smedjan</h3>
+          <p>A full-featured bicycle workshop & e-commerce platform. Inventory management, booking system, and seamless checkout.</p>
+          <div class="project-tags">
+            <span>React</span><span>Node.js</span><span>MongoDB</span>
+          </div>
+          <a href="#" class="project-link">Live Demo &rarr;</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-tilt>
+        <div class="project-image" style="background: linear-gradient(135deg, #e50914, #6b0000);">
+          <div class="project-overlay">
+            <span class="project-icon">&#127916;</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>HahuMoviesPlus</h3>
+          <p>A streaming-style movie discovery platform with trailers, ratings, search, and personalized watchlists.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>TypeScript</span><span>Tailwind</span>
+          </div>
+          <a href="#" class="project-link">Live Demo &rarr;</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-tilt>
+        <div class="project-image" style="background: linear-gradient(135deg, #0099ff, #003366);">
+          <div class="project-overlay">
+            <span class="project-icon">&#65039;</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>JayNursing</h3>
+          <p>A professional healthcare platform connecting patients with nursing services. Appointment scheduling, profiles, and telehealth integration.</p>
+          <div class="project-tags">
+            <span>Vue.js</span><span>Express</span><span>PostgreSQL</span>
+          </div>
+          <a href="#" class="project-link">Live Demo &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2>Skills & Expertise</h2>
+    </div>
+    <div class="skills-content">
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <div class="skill-bars">
+          <div class="skill"><span>HTML / CSS</span><div class="bar"><div class="bar-fill" data-width="95"></div></div></div>
+          <div class="skill"><span>JavaScript / TS</span><div class="bar"><div class="bar-fill" data-width="90"></div></div></div>
+          <div class="skill"><span>React / Next.js</span><div class="bar"><div class="bar-fill" data-width="88"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Backend</h3>
+        <div class="skill-bars">
+          <div class="skill"><span>Node.js / Express</span><div class="bar"><div class="bar-fill" data-width="90"></div></div></div>
+          <div class="skill"><span>Databases</span><div class="bar"><div class="bar-fill" data-width="85"></div></div></div>
+          <div class="skill"><span>REST / GraphQL</span><div class="bar"><div class="bar-fill" data-width="82"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Tools & Others</h3>
+        <div class="skill-bars">
+          <div class="skill"><span>Git / GitHub</span><div class="bar"><div class="bar-fill" data-width="92"></div></div></div>
+          <div class="skill"><span>Docker / DevOps</span><div class="bar"><div class="bar-fill" data-width="75"></div></div></div>
+          <div class="skill"><span>UI / UX Design</span><div class="bar"><div class="bar-fill" data-width="80"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2>Let's Connect</h2>
+    </div>
+    <div class="contact-content">
+      <p>Have a project in mind or just want to say hi?<br>I'm always open to new opportunities and collaborations.</p>
+      <div class="contact-links">
+        <a href="mailto:hamed@example.com" class="contact-item"><span>&#9993;</span> hamed@example.com</a>
+        <a href="#" class="contact-item"><span>&#128187;</span> GitHub</a>
+        <a href="#" class="contact-item"><span>&#128100;</span> LinkedIn</a>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2026 Hamed Hussein. Built with passion.</p>
+    </footer>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
