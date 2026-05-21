@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InvestPro - Portfolio Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">InvestPro</div>
+      <nav class="nav">
+        <a href="#" class="nav-item active">Portfolio</a>
+        <a href="#" class="nav-item">Markets</a>
+        <a href="#" class="nav-item">Trade</a>
+        <a href="#" class="nav-item">Watchlist</a>
+        <a href="#" class="nav-item">Analytics</a>
+        <a href="#" class="nav-item">Settings</a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="avatar">JD</div>
+          <div><div class="name">John Doe</div><div class="acct-type">Premium</div></div>
+        </div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <h1>Portfolio Overview</h1>
+        <div class="header-actions">
+          <button class="btn btn-outline" id="refreshBtn">Refresh</button>
+          <button class="btn btn-primary">+ New Trade</button>
+        </div>
+      </header>
+
+      <div class="portfolio-summary">
+        <div class="summary-card card">
+          <div class="s-label">Total Value</div>
+          <div class="s-value">$284,630.40</div>
+          <div class="s-change positive">+$4,230.15 (1.51%) today</div>
+        </div>
+        <div class="summary-card card">
+          <div class="s-label">Total Gain/Loss</div>
+          <div class="s-value positive">+$32,150.80</div>
+          <div class="s-change positive">+12.74% all time</div>
+        </div>
+        <div class="summary-card card">
+          <div class="s-label">Dividends</div>
+          <div class="s-value">$1,840.20</div>
+          <div class="s-change">This year</div>
+        </div>
+        <div class="summary-card card">
+          <div class="s-label">Cash Balance</div>
+          <div class="s-value">$18,400.00</div>
+          <div class="s-change">Available to trade</div>
+        </div>
+      </div>
+
+      <div class="chart-container card">
+        <div class="card-header"><h2>Portfolio Performance</h2><span class="card-link">1Y</span></div>
+        <div class="chart-placeholder" id="chartPlaceholder">
+          <canvas id="stockChart"></canvas>
+          <div class="chart-overlay">Portfolio Value Over Time</div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="card holdings-card">
+          <div class="card-header"><h2>Holdings</h2><a href="#" class="card-link">View All</a></div>
+          <table class="holdings-table" id="holdingsTable">
+            <thead><tr><th>Symbol</th><th>Shares</th><th>Price</th><th>Value</th><th>Change</th></tr></thead>
+            <tbody id="holdingsBody"></tbody>
+          </table>
+        </div>
+        <div class="card watchlist-card">
+          <div class="card-header"><h2>Watchlist</h2><a href="#" class="card-link">+ Add</a></div>
+          <div id="watchlistItems" class="watchlist-items"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

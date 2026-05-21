@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamVid — Video Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-btn" id="menuToggle" aria-label="Toggle sidebar">&#9776;</button>
+      <a href="#" class="logo">StreamVid</a>
+    </div>
+    <div class="header-center">
+      <div class="search-bar">
+        <input type="text" placeholder="Search videos..." id="searchInput">
+        <button class="search-btn" id="searchBtn">&#128269;</button>
+      </div>
+    </div>
+    <div class="header-right">
+      <button class="upload-btn" id="uploadBtn">&#43; Upload</button>
+      <div class="avatar" id="userAvatar">U</div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active"><span class="nav-icon">&#127910;</span> Home</a>
+        <a href="#" class="nav-item"><span class="nav-icon">&#128250;</span> Trending</a>
+        <a href="#" class="nav-item"><span class="nav-icon">&#128251;</span> Subscriptions</a>
+        <hr>
+        <a href="#" class="nav-item"><span class="nav-icon">&#128196;</span> Library</a>
+        <a href="#" class="nav-item"><span class="nav-icon">&#128213;</span> History</a>
+        <a href="#" class="nav-item"><span class="nav-icon">&#9200;</span> Watch Later</a>
+        <a href="#" class="nav-item"><span class="nav-icon">&#128077;</span> Liked Videos</a>
+      </nav>
+      <div class="sidebar-categories">
+        <h4>Categories</h4>
+        <div class="category-chips">
+          <span class="chip active">All</span>
+          <span class="chip">Music</span>
+          <span class="chip">Gaming</span>
+          <span class="chip">Education</span>
+          <span class="chip">Sports</span>
+          <span class="chip">Tech</span>
+          <span class="chip">Entertainment</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="mainContent">
+      <section class="categories-bar">
+        <span class="chip active">All</span>
+        <span class="chip">Music</span>
+        <span class="chip">Gaming</span>
+        <span class="chip">Education</span>
+        <span class="chip">Sports</span>
+        <span class="chip">Tech</span>
+        <span class="chip">Entertainment</span>
+        <span class="chip">News</span>
+        <span class="chip">Podcasts</span>
+      </section>
+
+      <section class="video-grid" id="videoGrid">
+        <!-- Cards injected by JS -->
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="uploadModal">
+    <div class="modal">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <h2>Upload Video</h2>
+      <div class="upload-zone" id="uploadZone">
+        <p>&#128194; Drag & drop your video here</p>
+        <p class="small">or click to browse</p>
+        <input type="file" accept="video/*" id="fileInput" hidden>
+      </div>
+      <form id="uploadForm">
+        <input type="text" placeholder="Video title" required>
+        <textarea placeholder="Description" rows="3"></textarea>
+        <select><option>Music</option><option>Gaming</option><option>Education</option><option>Tech</option></select>
+        <button type="submit" class="btn-primary">Upload</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="video-player-overlay" id="playerOverlay">
+    <div class="player-container">
+      <div class="player-header">
+        <button class="menu-btn" id="closePlayer">&times;</button>
+        <span class="logo" style="font-size:1rem">Now Playing</span>
+      </div>
+      <div class="player-main">
+        <div class="player-video">
+          <div class="video-placeholder" id="videoPlaceholder">
+            <span class="play-icon">&#9654;</span>
+            <p>Video Player</p>
+          </div>
+          <div class="video-info" id="videoInfo">
+            <h3 id="playerTitle">Video Title</h3>
+            <div class="video-meta">
+              <span id="playerViews">0 views</span>
+              <span id="playerDate">Just now</span>
+            </div>
+            <div class="video-actions">
+              <button class="action-btn">&#128077; Like</button>
+              <button class="action-btn">&#128079; Share</button>
+              <button class="action-btn">&#128190; Save</button>
+            </div>
+          </div>
+          <div class="channel-section">
+            <div class="channel-info">
+              <div class="channel-avatar">C</div>
+              <div>
+                <strong id="playerChannel">Channel Name</strong>
+                <p class="small" id="playerSubs">1.2K subscribers</p>
+              </div>
+              <button class="subscribe-btn">Subscribe</button>
+            </div>
+            <p class="channel-desc" id="playerDesc">Video description goes here.</p>
+          </div>
+        </div>
+        <aside class="related-sidebar">
+          <h4>Related Videos</h4>
+          <div id="relatedList"></div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

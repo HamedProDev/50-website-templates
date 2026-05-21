@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura AI - Chat Interface</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">Aura</div>
+        <button class="new-chat-btn" id="newChatBtn">+ New Chat</button>
+      </div>
+      <div class="conversation-list" id="conversationList">
+        <div class="conv-item active">
+          <span class="conv-icon">&#9998;</span>
+          <div class="conv-info">
+            <div class="conv-title">Project Planning</div>
+            <div class="conv-preview">Let's outline the architecture...</div>
+          </div>
+        </div>
+        <div class="conv-item">
+          <span class="conv-icon">&#9998;</span>
+          <div class="conv-info">
+            <div class="conv-title">Code Review</div>
+            <div class="conv-preview">Can you review this React component?</div>
+          </div>
+        </div>
+        <div class="conv-item">
+          <span class="conv-icon">&#9998;</span>
+          <div class="conv-info">
+            <div class="conv-title">Debugging Help</div>
+            <div class="conv-preview">Getting a 500 error on the API...</div>
+          </div>
+        </div>
+        <div class="conv-item">
+          <span class="conv-icon">&#9998;</span>
+          <div class="conv-info">
+            <div class="conv-title">Marketing Copy</div>
+            <div class="conv-preview">Write a product launch announcement</div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-footer">
+        <div class="usage-info">
+          <div class="usage-label">Tokens Used</div>
+          <div class="usage-bar"><div class="usage-fill" style="width:45%"></div></div>
+          <div class="usage-text">4,520 / 10,000</div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="chat-header">
+        <div class="chat-title">Project Planning</div>
+        <div class="chat-actions">
+          <div class="model-selector">
+            <label for="modelSelect">Model:</label>
+            <select id="modelSelect">
+              <option value="gpt-4">GPT-4 Turbo</option>
+              <option value="gpt-3.5">GPT-3.5 Turbo</option>
+              <option value="claude-3">Claude 3 Opus</option>
+              <option value="claude-sonnet">Claude 3 Sonnet</option>
+              <option value="llama-3">Llama 3 70B</option>
+            </select>
+          </div>
+          <button class="btn btn-icon" id="settingsBtn" title="Settings">&#9881;</button>
+        </div>
+      </header>
+
+      <div class="messages-container" id="messagesContainer">
+        <div class="message ai">
+          <div class="msg-avatar"><span class="ai-icon">&#9670;</span></div>
+          <div class="msg-content">
+            <div class="msg-text">Hello! I'm Aura, your AI assistant. How can I help you today?</div>
+            <div class="msg-time">Just now</div>
+          </div>
+        </div>
+        <div class="message user">
+          <div class="msg-avatar user-av">U</div>
+          <div class="msg-content">
+            <div class="msg-text">Can you help me plan a microservices architecture?</div>
+            <div class="msg-time">2 min ago</div>
+          </div>
+        </div>
+        <div class="message ai">
+          <div class="msg-avatar"><span class="ai-icon">&#9670;</span></div>
+          <div class="msg-content">
+            <div class="msg-text">Absolutely! Let's start with the key components you'll need:
+
+1. **API Gateway** - Single entry point for all services
+2. **Service Discovery** - For dynamic service location
+3. **Authentication Service** - JWT-based auth
+4. **Database per Service** - Decoupled data stores
+
+Would you like me to elaborate on any of these?</div>
+            <div class="msg-time">1 min ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <div class="input-wrapper">
+          <button class="btn btn-icon" id="fileUploadBtn" title="Upload file">&#128206;</button>
+          <textarea id="messageInput" class="message-input" placeholder="Type a message..." rows="1"></textarea>
+          <button class="btn btn-send" id="sendBtn">&#10148;</button>
+        </div>
+        <div class="input-footer">
+          <span>Aura may produce inaccurate information.</span>
+        </div>
+      </div>
+    </main>
+
+    <aside class="settings-panel" id="settingsPanel">
+      <div class="settings-header">
+        <h3>Settings</h3>
+        <button class="btn-icon" id="closeSettings">&times;</button>
+      </div>
+      <div class="settings-body">
+        <div class="setting-group">
+          <label class="setting-label">Temperature</label>
+          <input type="range" min="0" max="2" step="0.1" value="0.7" class="setting-slider">
+          <span class="setting-value">0.7</span>
+        </div>
+        <div class="setting-group">
+          <label class="setting-label">Max Tokens</label>
+          <input type="range" min="256" max="4096" step="256" value="2048" class="setting-slider">
+          <span class="setting-value">2048</span>
+        </div>
+        <div class="setting-group">
+          <label class="setting-label">Top P</label>
+          <input type="range" min="0" max="1" step="0.05" value="0.95" class="setting-slider">
+          <span class="setting-value">0.95</span>
+        </div>
+        <div class="setting-group">
+          <label class="checkbox-label"><input type="checkbox" checked> Stream responses</label>
+        </div>
+        <div class="setting-group">
+          <label class="checkbox-label"><input type="checkbox"> Dark mode</label>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

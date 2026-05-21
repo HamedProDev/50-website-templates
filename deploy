@@ -1,0 +1,208 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
+CATEGORIES_DIR="$REPO_DIR"
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+
+usage() {
+    cat <<EOF
+╔══════════════════════════════════════════════════════════════════╗
+║                    Websites Deals - Deploy Tool                 ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Usage: ./deploy <command> [options]
+
+Commands:
+  list                          List all template categories
+  list <category>               List templates in a category
+  show <category>/<template>    Show template info (README)
+  deploy <category>/<template> <target-dir>
+                                Copy a template to target directory
+  serve <category>/<template>   Preview a template locally (port 8080)
+  new <category> <name>         Create a new blank template in a category
+
+Examples:
+  ./deploy list
+  ./deploy list Portfolio_Websites
+  ./deploy deploy Portfolio_Websites/portfolio-1 ~/my-project
+  ./deploy serve Portfolio_Websites/portfolio-1
+
+EOF
+    exit 1
+}
+
+list_categories() {
+    echo -e "${BLUE}Available Categories:${NC}"
+    echo ""
+    for dir in "$CATEGORIES_DIR"/*/; do
+        name=$(basename "$dir")
+        count=$(find "$dir" -maxdepth 1 -type d | wc -l)
+        count=$((count - 1))
+        echo -e "  ${CYAN}$name${NC} (${count} templates)"
+    done
+    echo ""
+    echo -e "Total: $(find "$CATEGORIES_DIR" -maxdepth 1 -type d | wc -l) categories"
+}
+
+list_templates() {
+    local cat="$1"
+    local cat_dir="$CATEGORIES_DIR/$cat"
+    if [[ ! -d "$cat_dir" ]]; then
+        echo -e "${RED}Category '$cat' not found${NC}" >&2
+        exit 1
+    fi
+    echo -e "${BLUE}Templates in '$cat':${NC}"
+    echo ""
+    for tmpl in "$cat_dir"/*/; do
+        name=$(basename "$tmpl")
+        [[ "$name" == "." || "$name" == ".." ]] && continue
+        desc=""
+        if [[ -f "$tmpl/README.md" ]]; then
+            desc=$(head -1 "$tmpl/README.md" 2>/dev/null || echo "")
+        fi
+        echo -e "  ${CYAN}$name${NC} $desc"
+    done
+}
+
+deploy_template() {
+    local src="$1"
+    local dest="$2"
+    if [[ ! -d "$src" ]]; then
+        echo -e "${RED}Template not found: $src${NC}" >&2
+        exit 1
+    fi
+    if [[ -d "$dest" ]]; then
+        echo -e "${YELLOW}Warning: '$dest' already exists${NC}"
+        read -p "Overwrite? [y/N] " confirm
+        if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
+            echo "Cancelled"
+            exit 1
+        fi
+    fi
+    mkdir -p "$(dirname "$dest")"
+    cp -r "$src" "$dest"
+    echo -e "${GREEN}✓ Deployed to $dest${NC}"
+    echo ""
+    echo -e "Quick start:"
+    echo -e "  cd $dest"
+    echo -e "  # Edit index.html, style.css, script.js"
+    echo -e "  # Then open index.html in browser or serve with:"
+    echo -e "  python3 -m http.server 8080"
+}
+
+show_template() {
+    local tmpl_dir="$CATEGORIES_DIR/$1"
+    if [[ ! -d "$tmpl_dir" ]]; then
+        echo -e "${RED}Template not found: $1${NC}" >&2
+        exit 1
+    fi
+    echo -e "${BLUE}Template: $1${NC}"
+    echo ""
+    if [[ -f "$tmpl_dir/README.md" ]]; then
+        cat "$tmpl_dir/README.md"
+    else
+        echo "No description available."
+    fi
+    echo ""
+    echo -e "${CYAN}Files:${NC}"
+    find "$tmpl_dir" -type f | while read f; do
+        echo "  ${f#$tmpl_dir/}"
+    done
+}
+
+serve_template() {
+    local tmpl_dir="$CATEGORIES_DIR/$1"
+    if [[ ! -d "$tmpl_dir" ]]; then
+        echo -e "${RED}Template not found: $1${NC}" >&2
+        exit 1
+    fi
+    echo -e "${GREEN}Serving $1 at http://localhost:8080${NC}"
+    cd "$tmpl_dir" && python3 -m http.server 8080
+}
+
+new_template() {
+    local cat="$1"
+    local name="$2"
+    local cat_dir="$CATEGORIES_DIR/$cat"
+    if [[ ! -d "$cat_dir" ]]; then
+        echo -e "${RED}Category '$cat' not found${NC}" >&2
+        exit 1
+    fi
+    local tmpl_dir="$cat_dir/$name"
+    if [[ -d "$tmpl_dir" ]]; then
+        echo -e "${RED}Template '$name' already exists in '$cat'${NC}" >&2
+        exit 1
+    fi
+    mkdir -p "$tmpl_dir"
+    cat > "$tmpl_dir/index.html" << 'HTML'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Template</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <script src="script.js"></script>
+</body>
+</html>
+HTML
+    touch "$tmpl_dir/style.css"
+    touch "$tmpl_dir/script.js"
+    echo "# $name" > "$tmpl_dir/README.md"
+    echo -e "${GREEN}✓ Created blank template '$name' in '$cat'${NC}"
+}
+
+case "${1:-help}" in
+    list)
+        if [[ -n "${2:-}" ]]; then
+            list_templates "$2"
+        else
+            list_categories
+        fi
+        ;;
+    deploy)
+        if [[ -z "${2:-}" || -z "${3:-}" ]]; then
+            echo -e "${RED}Usage: ./deploy deploy <category>/<template> <target-dir>${NC}" >&2
+            exit 1
+        fi
+        deploy_template "$CATEGORIES_DIR/$2" "$3"
+        ;;
+    show)
+        if [[ -z "${2:-}" ]]; then
+            echo -e "${RED}Usage: ./deploy show <category>/<template>${NC}" >&2
+            exit 1
+        fi
+        show_template "$2"
+        ;;
+    serve)
+        if [[ -z "${2:-}" ]]; then
+            echo -e "${RED}Usage: ./deploy serve <category>/<template>${NC}" >&2
+            exit 1
+        fi
+        serve_template "$2"
+        ;;
+    new)
+        if [[ -z "${2:-}" || -z "${3:-}" ]]; then
+            echo -e "${RED}Usage: ./deploy new <category> <template-name>${NC}" >&2
+            exit 1
+        fi
+        new_template "$2" "$3"
+        ;;
+    help|--help|-h)
+        usage
+        ;;
+    *)
+        echo -e "${RED}Unknown command: $1${NC}" >&2
+        usage
+        ;;
+esac

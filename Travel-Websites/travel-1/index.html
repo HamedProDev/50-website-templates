@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderlust - Travel Agency</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">Wanderlust</div>
+        <nav class="nav" id="nav">
+          <a href="#destinations">Destinations</a>
+          <a href="#tours">Tours</a>
+          <a href="#blog">Blog</a>
+          <a href="#newsletter">Newsletter</a>
+        </nav>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" style="background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);"></div>
+      <div class="hero-slide" style="background:linear-gradient(135deg,#1a2a6c,#b21f1f,#fdbb2d);"></div>
+      <div class="hero-slide" style="background:linear-gradient(135deg,#0b8793,#360033);"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Explore the World</h1>
+        <p>Handcrafted travel experiences that create lifelong memories.</p>
+        <a href="#tours" class="btn btn-primary btn-lg">Discover Tours</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="destinations" class="section">
+    <div class="container">
+      <h2 class="section-title">Popular Destinations</h2>
+      <p class="section-desc">Handpicked destinations for your next adventure.</p>
+      <div class="dest-grid">
+        <div class="dest-card" style="--img:linear-gradient(135deg,#667eea,#764ba2);">
+          <div class="dest-body">
+            <h3>Bali, Indonesia</h3>
+            <p>From $899</p>
+            <span class="badge">7 Days</span>
+          </div>
+        </div>
+        <div class="dest-card" style="--img:linear-gradient(135deg,#f093fb,#f5576c);">
+          <div class="dest-body">
+            <h3>Paris, France</h3>
+            <p>From $1,299</p>
+            <span class="badge">5 Days</span>
+          </div>
+        </div>
+        <div class="dest-card" style="--img:linear-gradient(135deg,#4facfe,#00f2fe);">
+          <div class="dest-body">
+            <h3>Santorini, Greece</h3>
+            <p>From $1,149</p>
+            <span class="badge">6 Days</span>
+          </div>
+        </div>
+        <div class="dest-card" style="--img:linear-gradient(135deg,#a8edea,#fed6e3);">
+          <div class="dest-body">
+            <h3>Tokyo, Japan</h3>
+            <p>From $1,599</p>
+            <span class="badge">8 Days</span>
+          </div>
+        </div>
+        <div class="dest-card" style="--img:linear-gradient(135deg,#d4fc79,#96e6a1);">
+          <div class="dest-body">
+            <h3>Machu Picchu, Peru</h3>
+            <p>From $1,799</p>
+            <span class="badge">9 Days</span>
+          </div>
+        </div>
+        <div class="dest-card" style="--img:linear-gradient(135deg,#fa709a,#fee140);">
+          <div class="dest-body">
+            <h3>Dubai, UAE</h3>
+            <p>From $1,099</p>
+            <span class="badge">5 Days</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tours" class="section tours">
+    <div class="container">
+      <h2 class="section-title">Tour Packages</h2>
+      <p class="section-desc">Choose from our carefully curated packages.</p>
+      <div class="tours-grid">
+        <div class="tour-card">
+          <div class="tour-img" style="background:linear-gradient(135deg,#667eea,#764ba2);"><span>🌴</span></div>
+          <div class="tour-body">
+            <h3>Beach Escape</h3>
+            <p>Relax on pristine beaches with all-inclusive resort stays.</p>
+            <ul>
+              <li>✓ Round-trip flights</li>
+              <li>✓ 4★ resort stay</li>
+              <li>✓ Daily breakfast</li>
+              <li>✓ Airport transfers</li>
+            </ul>
+            <p class="tour-price">$899 <small>per person</small></p>
+            <a href="#" class="btn btn-primary btn-block">Book Now</a>
+          </div>
+        </div>
+        <div class="tour-card">
+          <div class="tour-img" style="background:linear-gradient(135deg,#4facfe,#00f2fe);"><span>🏔️</span></div>
+          <div class="tour-body">
+            <h3>Mountain Trek</h3>
+            <p>Challenge yourself with guided mountain expeditions.</p>
+            <ul>
+              <li>✓ Professional guide</li>
+              <li>✓ Camping equipment</li>
+              <li>✓ All meals included</li>
+              <li>✓ Emergency support</li>
+            </ul>
+            <p class="tour-price">$1,499 <small>per person</small></p>
+            <a href="#" class="btn btn-primary btn-block">Book Now</a>
+          </div>
+        </div>
+        <div class="tour-card">
+          <div class="tour-img" style="background:linear-gradient(135deg,#f093fb,#f5576c);"><span>🏙️</span></div>
+          <div class="tour-body">
+            <h3>City Explorer</h3>
+            <p>Discover iconic landmarks and hidden city gems.</p>
+            <ul>
+              <li>✓ City tours & museums</li>
+              <li>✓ Central hotel</li>
+              <li>✓ Local guide</li>
+              <li>✓ Street food tour</li>
+            </ul>
+            <p class="tour-price">$1,199 <small>per person</small></p>
+            <a href="#" class="btn btn-primary btn-block">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="section blog">
+    <div class="container">
+      <h2 class="section-title">Travel Blog</h2>
+      <p class="section-desc">Tips, stories, and guides from our travelers.</p>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,#a8edea,#fed6e3);"></div>
+          <div class="blog-body">
+            <span class="badge">Tips</span>
+            <h3>10 Essential Travel Tips</h3>
+            <p>Everything you need to know before your next trip.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,#d4fc79,#96e6a1);"></div>
+          <div class="blog-body">
+            <span class="badge">Guide</span>
+            <h3>Best Beaches in Southeast Asia</h3>
+            <p>Our top picks for paradise beaches.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,#fa709a,#fee140);"></div>
+          <div class="blog-body">
+            <span class="badge">Stories</span>
+            <h3>A Week in Kyoto</h3>
+            <p>Immersing in Japanese culture and traditions.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter" class="section newsletter">
+    <div class="container">
+      <div class="newsletter-box">
+        <h2>Join Our Newsletter</h2>
+        <p>Get exclusive deals and travel inspiration delivered to your inbox.</p>
+        <form id="newsletterForm">
+          <div class="newsletter-input">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <p class="form-msg" id="nlMsg"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Wanderlust</h3>
+          <p>Your trusted travel partner since 2008.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>📞 (555) 987-6543</p>
+          <p>✉ hello@wanderlust.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Wanderlust Travel Agency. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PremiumHub - Membership Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">PremiumHub</a>
+      <div class="nav-links">
+        <a href="#" class="active">Plans</a>
+        <a href="#">Features</a>
+        <a href="#">Enterprise</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-outline">Sign In</button>
+        <button class="btn-primary">Get Started</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="pricing-hero">
+    <div class="pricing-hero-bg"></div>
+    <div class="pricing-hero-content">
+      <span class="badge">Simple Pricing</span>
+      <h1>Choose the perfect plan for your needs</h1>
+      <p>Start free and upgrade when you're ready. No hidden fees, cancel anytime.</p>
+      <div class="toggle-wrap">
+        <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+        <label class="toggle">
+          <input type="checkbox" id="billingToggle">
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-label" id="yearlyLabel">Yearly <span class="save-badge">Save 20%</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <div class="pricing-grid" id="pricingGrid">
+      <div class="plan-card free">
+        <div class="plan-badge">Free</div>
+        <h3 class="plan-name">Starter</h3>
+        <div class="plan-price"><span class="price-amount" data-monthly="$0" data-yearly="$0">$0</span><span class="price-period">/month</span></div>
+        <p class="plan-desc">Perfect for getting started</p>
+        <ul class="plan-features">
+          <li>Up to 3 projects</li>
+          <li>Basic analytics</li>
+          <li>24-hour support response</li>
+          <li>1 team member</li>
+          <li>2GB storage</li>
+        </ul>
+        <button class="plan-btn">Get Started Free</button>
+      </div>
+
+      <div class="plan-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="plan-badge">Pro</div>
+        <h3 class="plan-name">Professional</h3>
+        <div class="plan-price"><span class="price-amount" data-monthly="$29" data-yearly="$23">$29</span><span class="price-period">/month</span></div>
+        <p class="plan-desc">For growing teams</p>
+        <ul class="plan-features">
+          <li>Unlimited projects</li>
+          <li>Advanced analytics & reports</li>
+          <li>Priority support</li>
+          <li>Up to 10 team members</li>
+          <li>50GB storage</li>
+          <li>Custom integrations</li>
+          <li>API access</li>
+        </ul>
+        <button class="plan-btn popular-btn">Start 14-Day Trial</button>
+      </div>
+
+      <div class="plan-card enterprise">
+        <div class="plan-badge">Enterprise</div>
+        <h3 class="plan-name">Enterprise</h3>
+        <div class="plan-price"><span class="price-amount" data-monthly="$99" data-yearly="$79">$99</span><span class="price-period">/month</span></div>
+        <p class="plan-desc">For large organizations</p>
+        <ul class="plan-features">
+          <li>Everything in Pro</li>
+          <li>Dedicated account manager</li>
+          <li>24/7 phone support</li>
+          <li>Unlimited team members</li>
+          <li>Unlimited storage</li>
+          <li>Custom SLA</li>
+          <li>On-premise option</li>
+          <li>SSO & advanced security</li>
+        </ul>
+        <button class="plan-btn">Contact Sales</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-comparison">
+    <h2>Compare Plans</h2>
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Starter</th>
+            <th>Professional</th>
+            <th>Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Projects</td><td>3</td><td>Unlimited</td><td>Unlimited</td></tr>
+          <tr><td>Storage</td><td>2GB</td><td>50GB</td><td>Unlimited</td></tr>
+          <tr><td>Team Members</td><td>1</td><td>10</td><td>Unlimited</td></tr>
+          <tr><td>Analytics</td><td>Basic</td><td>Advanced</td><td>Custom</td></tr>
+          <tr><td>Support</td><td>Email (24h)</td><td>Priority</td><td>24/7 Phone</td></tr>
+          <tr><td>API Access</td><td>—</td><td>✓</td><td>✓</td></tr>
+          <tr><td>SSO</td><td>—</td><td>—</td><td>✓</td></tr>
+          <tr><td>Custom SLA</td><td>—</td><td>—</td><td>✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="dashboard-preview">
+    <h2>Member Dashboard</h2>
+    <div class="dashboard-card">
+      <div class="dash-header">
+        <div class="dash-user">
+          <div class="dash-avatar">JD</div>
+          <div>
+            <div class="dash-name">Jane Doe</div>
+            <div class="dash-plan">Professional Plan</div>
+          </div>
+        </div>
+        <div class="dash-badge">Active</div>
+      </div>
+      <div class="dash-stats">
+        <div class="dash-stat"><span class="stat-value">12</span><span class="stat-label">Projects</span></div>
+        <div class="dash-stat"><span class="stat-value">2.4GB</span><span class="stat-label">Storage Used</span></div>
+        <div class="dash-stat"><span class="stat-value">8</span><span class="stat-label">Team Members</span></div>
+        <div class="dash-stat"><span class="stat-value">342</span><span class="stat-label">API Calls</span></div>
+      </div>
+      <div class="billing-section">
+        <h4>Billing History</h4>
+        <table class="billing-table">
+          <tr><td>PremiumHub Pro - Monthly</td><td>$29.00</td><td class="paid">Paid</td><td>May 1, 2024</td></tr>
+          <tr><td>PremiumHub Pro - Monthly</td><td>$29.00</td><td class="paid">Paid</td><td>Apr 1, 2024</td></tr>
+          <tr><td>PremiumHub Pro - Monthly</td><td>$29.00</td><td class="paid">Paid</td><td>Mar 1, 2024</td></tr>
+          <tr><td>Storage Add-on - 10GB</td><td>$5.00</td><td class="paid">Paid</td><td>Feb 15, 2024</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 PremiumHub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinVault - Banking Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">FinVault</div>
+      <nav class="nav">
+        <a href="#" class="nav-item active"><span class="nav-icon">&#9679;</span>Dashboard</a>
+        <a href="#" class="nav-item"><span class="nav-icon">&#9679;</span>Accounts</a>
+        <a href="#" class="nav-item"><span class="nav-icon">&#9679;</span>Transactions</a>
+        <a href="#" class="nav-item"><span class="nav-icon">&#9679;</span>Transfers</a>
+        <a href="#" class="nav-item"><span class="nav-icon">&#9679;</span>Analytics</a>
+        <a href="#" class="nav-item"><span class="nav-icon">&#9679;</span>Settings</a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="user-avatar">JD</div>
+          <div class="user-name">John Doe</div>
+        </div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <h1>Welcome back, John</h1>
+        <div class="header-actions">
+          <button class="btn btn-outline" id="notifBtn">Notifications</button>
+          <button class="btn btn-primary" id="addAccountBtn">+ New Account</button>
+        </div>
+      </header>
+
+      <section class="accounts-grid" id="accountsGrid">
+        <div class="account-card card">
+          <div class="card-top">
+            <span class="card-label">Checking</span>
+            <span class="card-type">&#9679;&#9679;&#9679;&#9679;</span>
+          </div>
+          <div class="card-balance">$12,450.80</div>
+          <div class="card-bottom">
+            <span>**** 4832</span>
+            <span class="card-change positive">+2.4%</span>
+          </div>
+        </div>
+        <div class="account-card card">
+          <div class="card-top">
+            <span class="card-label">Savings</span>
+            <span class="card-type">&#9679;&#9679;&#9679;&#9679;</span>
+          </div>
+          <div class="card-balance">$48,200.00</div>
+          <div class="card-bottom">
+            <span>**** 7721</span>
+            <span class="card-change positive">+5.1%</span>
+          </div>
+        </div>
+        <div class="account-card card">
+          <div class="card-top">
+            <span class="card-label">Investment</span>
+            <span class="card-type">&#9679;&#9679;&#9679;&#9679;</span>
+          </div>
+          <div class="card-balance">$104,300.50</div>
+          <div class="card-bottom">
+            <span>**** 9034</span>
+            <span class="card-change negative">-1.2%</span>
+          </div>
+        </div>
+        <div class="account-card card">
+          <div class="card-top">
+            <span class="card-label">Credit Card</span>
+            <span class="card-type">&#9679;&#9679;&#9679;&#9679;</span>
+          </div>
+          <div class="card-balance">$3,240.00</div>
+          <div class="card-bottom">
+            <span>Due 15th</span>
+            <span class="card-change negative">$230 min</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <div class="card transactions-card">
+          <div class="card-header">
+            <h2>Recent Transactions</h2>
+            <a href="#" class="card-link">View All</a>
+          </div>
+          <table class="transaction-table" id="transactionTable">
+            <thead>
+              <tr><th>Payee</th><th>Date</th><th>Amount</th><th>Status</th></tr>
+            </thead>
+            <tbody id="transactionBody">
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card transfer-card">
+          <div class="card-header">
+            <h2>Transfer Money</h2>
+          </div>
+          <form id="transferForm" class="transfer-form">
+            <select id="fromAccount" class="form-input" required>
+              <option value="">From Account</option>
+              <option value="checking">Checking (****4832)</option>
+              <option value="savings">Savings (****7721)</option>
+            </select>
+            <input type="text" id="toAccount" class="form-input" placeholder="Recipient Account" required>
+            <input type="number" id="amount" class="form-input" placeholder="Amount ($)" min="1" step="0.01" required>
+            <textarea id="memo" class="form-input" placeholder="Memo (optional)" rows="2"></textarea>
+            <button type="submit" class="btn btn-primary btn-block">Send Transfer</button>
+          </form>
+        </div>
+
+        <div class="card spending-card">
+          <div class="card-header">
+            <h2>Spending Breakdown</h2>
+            <span class="card-link">This Month</span>
+          </div>
+          <div class="bar-chart" id="barChart">
+            <div class="bar-item" style="--h: 85%"><span class="bar-label">Housing</span><span class="bar-value">$1,820</span></div>
+            <div class="bar-item" style="--h: 60%"><span class="bar-label">Food</span><span class="bar-value">$1,240</span></div>
+            <div class="bar-item" style="--h: 45%"><span class="bar-label">Transport</span><span class="bar-value">$890</span></div>
+            <div class="bar-item" style="--h: 35%"><span class="bar-label">Entertainment</span><span class="bar-value">$620</span></div>
+            <div class="bar-item" style="--h: 25%"><span class="bar-label">Utilities</span><span class="bar-value">$450</span></div>
+            <div class="bar-item" style="--h: 15%"><span class="bar-label">Other</span><span class="bar-value">$280</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

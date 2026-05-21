@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Rivera | Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo">AR<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="container hero-content">
+      <p class="hero-greeting">Hi, my name is</p>
+      <h1 class="hero-name">Alex Rivera</h1>
+      <h2 class="hero-tagline">I build things for the web.</h2>
+      <p class="hero-desc">Full-stack developer specializing in building exceptional digital experiences. Currently focused on building accessible, performant web applications.</p>
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title"><span class="section-num">01.</span> Projects</h2>
+      <div class="project-grid" id="projectGrid">
+        <article class="project-card">
+          <div class="card-front"><h3>EcoTrack</h3><p>A real-time carbon footprint tracker with interactive dashboards.</p><span class="tech">React · D3 · Node</span></div>
+        </article>
+        <article class="project-card">
+          <div class="card-front"><h3>ChatSync</h3><p>Collaborative workspace with end-to-end encrypted messaging.</p><span class="tech">Vue · Socket.io · Go</span></div>
+        </article>
+        <article class="project-card">
+          <div class="card-front"><h3>PixelForge</h3><p>AI-powered image editor with real-time filters and layers.</p><span class="tech">Next.js · TF.js · Python</span></div>
+        </article>
+        <article class="project-card">
+          <div class="card-front"><h3>DevFlow</h3><p>Automated CI/CD pipeline visualizer and monitoring tool.</p><span class="tech">Svelte · GraphQL · Rust</span></div>
+        </article>
+        <article class="project-card">
+          <div class="card-front"><h3>CloudHive</h3><p>Serverless deployment platform with auto-scaling.</p><span class="tech">Angular · AWS · Terraform</span></div>
+        </article>
+        <article class="project-card">
+          <div class="card-front"><h3>DataVault</h3><p>Distributed storage system with blockchain verification.</p><span class="tech">Lit · WebRTC · IPFS</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title"><span class="section-num">02.</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-cat"><h3>Frontend</h3><ul><li>React / Next.js</li><li>Vue / Nuxt</li><li>TypeScript</li><li>CSS / SASS</li></ul></div>
+        <div class="skill-cat"><h3>Backend</h3><ul><li>Node.js / Express</li><li>Python / FastAPI</li><li>Go / Gin</li><li>PostgreSQL / Redis</li></ul></div>
+        <div class="skill-cat"><h3>DevOps</h3><ul><li>Docker / K8s</li><li>AWS / GCP</li><li>Terraform</li><li>GitHub Actions</li></ul></div>
+        <div class="skill-cat"><h3>Tools</h3><ul><li>Figma</li><li>Storybook</li><li>Cypress</li><li>Webpack / Vite</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title"><span class="section-num">03.</span> Contact</h2>
+      <p class="contact-text">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, reach out!</p>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="5" placeholder="Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="#" aria-label="GitHub">GH</a>
+        <a href="#" aria-label="LinkedIn">LI</a>
+        <a href="#" aria-label="Twitter">TW</a>
+      </div>
+      <p>&copy; 2026 Alex Rivera. Built with care.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

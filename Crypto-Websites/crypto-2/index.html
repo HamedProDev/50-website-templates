@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtBlock - NFT Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top-header">
+      <div class="logo">ArtBlock</div>
+      <nav class="top-nav">
+        <a href="#" class="active">Explore</a>
+        <a href="#">Stats</a>
+        <a href="#">Create</a>
+        <a href="#">Community</a>
+      </nav>
+      <div class="top-actions">
+        <button class="btn btn-outline">Connect Wallet</button>
+        <button class="btn btn-primary">Create</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <h1>Discover, collect & sell<br>extraordinary NFTs</h1>
+        <p>The world's leading NFT marketplace for digital artists</p>
+      </section>
+
+      <section class="stats-bar">
+        <div class="stat-item"><span class="stat-num">$2.4B</span><span class="stat-label">Total Volume</span></div>
+        <div class="stat-item"><span class="stat-num">18.5K</span><span class="stat-label">NFTs Listed</span></div>
+        <div class="stat-item"><span class="stat-num">42K</span><span class="stat-label">Creators</span></div>
+        <div class="stat-item"><span class="stat-num">320K</span><span class="stat-label">Collectors</span></div>
+      </section>
+
+      <section class="gallery">
+        <div class="section-header">
+          <h2>Trending NFTs</h2>
+          <a href="#" class="section-link">View All</a>
+        </div>
+        <div class="nft-grid" id="nftGrid"></div>
+      </section>
+
+      <section class="creators-section">
+        <div class="section-header">
+          <h2>Top Creators</h2>
+          <a href="#" class="section-link">View All</a>
+        </div>
+        <div class="creators-grid" id="creatorsGrid"></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

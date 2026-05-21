@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveNow - Premium Car Rentals</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">DriveNow</div>
+        <nav class="nav" id="nav">
+          <a href="#fleet">Fleet</a>
+          <a href="#booking">Booking</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#locations">Locations</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Hit the Road with Confidence</h1>
+        <p>Premium vehicles at unbeatable prices. Book online in minutes.</p>
+        <a href="#booking" class="btn btn-primary btn-lg">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="fleet" class="section fleet">
+    <div class="container">
+      <h2 class="section-title">Our Fleet</h2>
+      <p class="section-desc">Choose from our wide selection of well-maintained vehicles.</p>
+      <div class="fleet-grid" id="fleetGrid">
+        <div class="fleet-card">
+          <div class="fleet-img" style="background:#2c3e50;"><span class="fleet-icon">🚗</span></div>
+          <div class="fleet-body">
+            <h3>Economy</h3>
+            <p>Toyota Yaris or similar · Manual · A/C</p>
+            <ul class="fleet-features">
+              <li>✔ Up to 4 passengers</li>
+              <li>✔ 1 large bag</li>
+              <li>✔ Unlimited mileage</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-img" style="background:#34495e;"><span class="fleet-icon">🚙</span></div>
+          <div class="fleet-body">
+            <h3>Compact SUV</h3>
+            <p>Honda CR-V or similar · Auto · A/C</p>
+            <ul class="fleet-features">
+              <li>✔ Up to 5 passengers</li>
+              <li>✔ 2 large bags</li>
+              <li>✔ Unlimited mileage</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-img" style="background:#1a252f;"><span class="fleet-icon">🚐</span></div>
+          <div class="fleet-body">
+            <h3>Minivan</h3>
+            <p>Toyota Sienna or similar · Auto · A/C</p>
+            <ul class="fleet-features">
+              <li>✔ Up to 7 passengers</li>
+              <li>✔ 4 large bags</li>
+              <li>✔ Unlimited mileage</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-img" style="background:#2c3e50;"><span class="fleet-icon">🏎️</span></div>
+          <div class="fleet-body">
+            <h3>Luxury Sedan</h3>
+            <p>Mercedes E-Class or similar · Auto · Leather</p>
+            <ul class="fleet-features">
+              <li>✔ Up to 4 passengers</li>
+              <li>✔ 2 large bags</li>
+              <li>✔ GPS included</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-img" style="background:#34495e;"><span class="fleet-icon">🛻</span></div>
+          <div class="fleet-body">
+            <h3>Pickup Truck</h3>
+            <p>Ford F-150 or similar · Auto · 4x4</p>
+            <ul class="fleet-features">
+              <li>✔ Up to 5 passengers</li>
+              <li>✔ Cargo bed</li>
+              <li>✔ Tow hitch opt.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-img" style="background:#1a252f;"><span class="fleet-icon">🚌</span></div>
+          <div class="fleet-body">
+            <h3>Passenger Van</h3>
+            <p>Ford Transit or similar · Auto · A/C</p>
+            <ul class="fleet-features">
+              <li>✔ Up to 12 passengers</li>
+              <li>✔ 6 large bags</li>
+              <li>✔ Group discount</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="section booking">
+    <div class="container">
+      <h2 class="section-title">Book Your Ride</h2>
+      <p class="section-desc">Fill in the details and we'll have your car ready.</p>
+      <form class="booking-form" id="bookingForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="carType">Car Type</label>
+            <select id="carType" required>
+              <option value="">Select a car</option>
+              <option value="economy">Economy</option>
+              <option value="suv">Compact SUV</option>
+              <option value="minivan">Minivan</option>
+              <option value="luxury">Luxury Sedan</option>
+              <option value="pickup">Pickup Truck</option>
+              <option value="van">Passenger Van</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pickupDate">Pickup Date</label>
+            <input type="date" id="pickupDate" required>
+          </div>
+          <div class="form-group">
+            <label for="returnDate">Return Date</label>
+            <input type="date" id="returnDate" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pickupLocation">Pickup Location</label>
+            <select id="pickupLocation" required>
+              <option value="">Select location</option>
+              <option value="downtown">Downtown</option>
+              <option value="airport">Airport</option>
+              <option value="uptown">Uptown</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="john@example.com" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+        <p class="form-msg" id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="pricing" class="section pricing">
+    <div class="container">
+      <h2 class="section-title">Pricing</h2>
+      <p class="section-desc">Transparent pricing with no hidden fees.</p>
+      <div class="pricing-table">
+        <div class="pricing-card">
+          <h3>Daily</h3>
+          <p class="price">$39<span>/day</span></p>
+          <ul>
+            <li>Unlimited miles</li>
+            <li>Basic insurance</li>
+            <li>24/7 roadside</li>
+          </ul>
+        </div>
+        <div class="pricing-card featured">
+          <h3>Weekly</h3>
+          <p class="price">$179<span>/week</span></p>
+          <ul>
+            <li>Unlimited miles</li>
+            <li>Full insurance</li>
+            <li>24/7 roadside</li>
+            <li>Free additional driver</li>
+          </ul>
+        </div>
+        <div class="pricing-card">
+          <h3>Monthly</h3>
+          <p class="price">$599<span>/month</span></p>
+          <ul>
+            <li>Unlimited miles</li>
+            <li>Full insurance</li>
+            <li>24/7 roadside</li>
+            <li>Free additional driver</li>
+            <li>Flexible return</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="locations" class="section locations">
+    <div class="container">
+      <h2 class="section-title">Our Locations</h2>
+      <p class="section-desc">Find us in these convenient locations.</p>
+      <div class="locations-grid">
+        <div class="location-card">
+          <div class="location-icon">📍</div>
+          <h3>Downtown</h3>
+          <p>123 Main Street, Suite 100</p>
+          <p>Mon-Sat 8am-8pm</p>
+        </div>
+        <div class="location-card">
+          <div class="location-icon">📍</div>
+          <h3>Airport</h3>
+          <p>456 Terminal Drive</p>
+          <p>Open 24/7</p>
+        </div>
+        <div class="location-card">
+          <div class="location-icon">📍</div>
+          <h3>Uptown</h3>
+          <p>789 Oak Avenue</p>
+          <p>Mon-Sat 9am-6pm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>DriveNow</h3>
+          <p>Premium car rental services since 2010. We put the joy back in driving.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#fleet">Fleet</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>📞 (555) 123-4567</p>
+          <p>✉ info@drivenow.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 DriveNow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlixStream — Movie & TV Streaming</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">FlixStream</a>
+    <nav class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">TV Shows</a>
+      <a href="#">My List</a>
+    </nav>
+    <div class="header-right">
+      <button class="icon-btn" id="searchToggle">&#128269;</button>
+      <div class="profile-dropdown" id="profileDropdown">
+        <div class="profile-trigger" id="profileTrigger">
+          <div class="avatar">U</div>
+          <span>&#9660;</span>
+        </div>
+        <div class="dropdown-menu">
+          <a href="#">Profile</a>
+          <a href="#">Account</a>
+          <a href="#">Help</a>
+          <hr>
+          <a href="#">Sign Out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-banner">
+    <div class="hero-content">
+      <span class="hero-badge">New Release</span>
+      <h1 class="hero-title">Shadow Realm</h1>
+      <div class="hero-meta">
+        <span class="rating">&#9733; 8.9</span>
+        <span>2026</span>
+        <span>2h 18m</span>
+        <span class="maturity">16+</span>
+      </div>
+      <p class="hero-desc">In a world where shadows come alive, one hero must confront the darkness within to save humanity from eternal night.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary">&#9654; Play</button>
+        <button class="btn-secondary">&#9432; More Info</button>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <main class="main-content">
+    <section class="row-section">
+      <div class="row-header">
+        <h2>Continue Watching</h2>
+        <a href="#" class="see-all">See All</a>
+      </div>
+      <div class="horizontal-scroll" id="continueWatching">
+        <!-- injected by JS -->
+      </div>
+    </section>
+
+    <section class="row-section">
+      <div class="row-header">
+        <h2>Trending Now</h2>
+        <a href="#" class="see-all">See All</a>
+      </div>
+      <div class="horizontal-scroll" id="trendingNow">
+        <!-- injected by JS -->
+      </div>
+    </section>
+
+    <section class="row-section">
+      <div class="row-header">
+        <h2>Action & Adventure</h2>
+        <a href="#" class="see-all">See All</a>
+      </div>
+      <div class="horizontal-scroll" id="actionRow">
+        <!-- injected by JS -->
+      </div>
+    </section>
+
+    <section class="row-section">
+      <div class="row-header">
+        <h2>Comedy Favorites</h2>
+        <a href="#" class="see-all">See All</a>
+      </div>
+      <div class="horizontal-scroll" id="comedyRow">
+        <!-- injected by JS -->
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

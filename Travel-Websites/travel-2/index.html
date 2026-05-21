@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeakX - Adventure Travel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">PeakX</div>
+        <nav class="nav" id="nav">
+          <a href="#expeditions">Expeditions</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#gear">Gear</a>
+        </nav>
+        <button class="mobile-toggle" id="mobileToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Conquer the Wild</h1>
+        <p>Push your limits with guided expeditions to the world's most extreme locations.</p>
+        <a href="#expeditions" class="btn btn-primary btn-lg">View Expeditions</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="expeditions" class="section">
+    <div class="container">
+      <h2 class="section-title">Expedition Packages</h2>
+      <p class="section-desc">Guided adventures for every skill level.</p>
+      <div class="exp-grid">
+        <div class="exp-card">
+          <div class="exp-level">Moderate</div>
+          <div class="exp-icon">🏔️</div>
+          <h3>Everest Base Camp</h3>
+          <p>14-day trek to the foot of the world's highest peak.</p>
+          <ul>
+            <li>Professional Sherpa guides</li>
+            <li>All permits & fees</li>
+            <li>Teahouse accommodation</li>
+            <li>Group medical kit</li>
+          </ul>
+          <p class="exp-price">$2,499 <small>per person</small></p>
+          <a href="#" class="btn btn-primary btn-block">Book Expedition</a>
+        </div>
+        <div class="exp-card featured">
+          <div class="exp-level">Challenging</div>
+          <div class="exp-icon">🗻</div>
+          <h3>Kilimanjaro Summit</h3>
+          <p>8-day climb to the roof of Africa via the Machame route.</p>
+          <ul>
+            <li>Certified mountain guides</li>
+            <li>Porters & cooks included</li>
+            <li>Quality camping gear</li>
+            <li>Summit celebration</li>
+          </ul>
+          <p class="exp-price">$3,299 <small>per person</small></p>
+          <a href="#" class="btn btn-primary btn-block">Book Expedition</a>
+        </div>
+        <div class="exp-card">
+          <div class="exp-level">Extreme</div>
+          <div class="exp-icon">🧊</div>
+          <h3>Patagonia Ice Field</h3>
+          <p>12-day ice trekking across the Southern Patagonian Ice Field.</p>
+          <ul>
+            <li>Ice climbing instruction</li>
+            <li>Satellite comms</li>
+            <li>Technical gear rental</li>
+            <li>Emergency evacuation</li>
+          </ul>
+          <p class="exp-price">$4,899 <small>per person</small></p>
+          <a href="#" class="btn btn-primary btn-block">Book Expedition</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section gallery">
+    <div class="container">
+      <h2 class="section-title">Expedition Gallery</h2>
+      <p class="section-desc">Moments captured on our adventures.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item" style="--bg:linear-gradient(135deg,#1a2a6c,#b21f1f);"><span>🏔️</span></div>
+        <div class="gallery-item" style="--bg:linear-gradient(135deg,#0f2027,#203a43);"><span>🌲</span></div>
+        <div class="gallery-item" style="--bg:linear-gradient(135deg,#4facfe,#00f2fe);"><span>🏞️</span></div>
+        <div class="gallery-item" style="--bg:linear-gradient(135deg,#667eea,#764ba2);"><span>🌄</span></div>
+        <div class="gallery-item" style="--bg:linear-gradient(135deg,#f093fb,#f5576c);"><span>🧗</span></div>
+        <div class="gallery-item" style="--bg:linear-gradient(135deg,#fa709a,#fee140);"><span>🏕️</span></div>
+        <div class="gallery-item" style="--bg:linear-gradient(135deg,#a8edea,#fed6e3);"><span>🏔️</span></div>
+        <div class="gallery-item" style="--bg:linear-gradient(135deg,#d4fc79,#96e6a1);"><span>🌋</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline" class="section timeline">
+    <div class="container">
+      <h2 class="section-title">Booking Timeline</h2>
+      <p class="section-desc">How to book your adventure in 4 easy steps.</p>
+      <div class="timeline-grid">
+        <div class="timeline-step">
+          <div class="step-num">1</div>
+          <h3>Choose Expedition</h3>
+          <p>Browse our packages and pick your adventure.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="step-num">2</div>
+          <h3>Book & Deposit</h3>
+          <p>Pay a 30% deposit to secure your spot.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="step-num">3</div>
+          <h3>Prepare</h3>
+          <p>Receive gear lists, training plans, and briefing.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="step-num">4</div>
+          <h3>Go!</h3>
+          <p>Embark with your guide and fellow adventurers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gear" class="section gear">
+    <div class="container">
+      <h2 class="section-title">Gear Checklist</h2>
+      <p class="section-desc">Essential equipment for your expedition.</p>
+      <div class="gear-grid">
+        <div class="gear-item"><label><input type="checkbox"> Hiking boots (broken in)</label></div>
+        <div class="gear-item"><label><input type="checkbox"> 4-season sleeping bag</label></div>
+        <div class="gear-item"><label><input type="checkbox"> Insulated jacket</label></div>
+        <div class="gear-item"><label><input type="checkbox"> Waterproof shell</label></div>
+        <div class="gear-item"><label><input type="checkbox"> Trekking poles</label></div>
+        <div class="gear-item"><label><input type="checkbox"> Headlamp + spare batteries</label></div>
+        <div class="gear-item"><label><input type="checkbox"> First aid kit</label></div>
+        <div class="gear-item"><label><input type="checkbox"> Water filter</label></div>
+        <div class="gear-item"><label><input type="checkbox"> Navigation (GPS + map)</label></div>
+        <div class="gear-item"><label><input type="checkbox"> Sun protection</label></div>
+        <div class="gear-item"><label><input type="checkbox"> Hydration system (3L+)</label></div>
+        <div class="gear-item"><label><input type="checkbox"> High-energy snacks</label></div>
+      </div>
+      <div class="gear-progress" id="gearProgress">0/12 items checked</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>PeakX Adventures</h3>
+          <p>Pushing boundaries since 2012.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>📞 (555) 456-7890</p>
+          <p>✉ adventure@peakx.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 PeakX Adventures.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

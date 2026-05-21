@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew & Bean | Coffee House</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">Brew & Bean</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="#specials">Specials</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>Brew & Bean</h1>
+      <p>Handcrafted coffee, cozy vibes, every sip tells a story</p>
+      <a href="#menu" class="btn btn-primary">View Our Menu</a>
+    </div>
+  </section>
+
+  <section id="specials" class="section">
+    <div class="container">
+      <h2 class="section-title">Daily Specials</h2>
+      <div class="specials-grid" id="specialsGrid"></div>
+    </div>
+  </section>
+
+  <section id="menu" class="section section-brown">
+    <div class="container">
+      <h2 class="section-title">Our Menu</h2>
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-cat="coffee">Coffee</button>
+        <button class="tab-btn" data-cat="tea">Tea</button>
+        <button class="tab-btn" data-cat="pastry">Pastries</button>
+      </div>
+      <div class="menu-items" id="menuItems"></div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-title">Our Space</h2>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <section id="hours" class="section section-brown">
+    <div class="container">
+      <h2 class="section-title">Opening Hours</h2>
+      <div class="hours-table">
+        <div class="hours-row"><span>Monday – Friday</span><span>7:00 AM – 8:00 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>8:00 AM – 9:00 PM</span></div>
+        <div class="hours-row"><span>Sunday</span><span>8:00 AM – 6:00 PM</span></div>
+        <div class="hours-row highlight"><span>Happy Hour (Mon–Fri)</span><span>3:00 PM – 6:00 PM</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-grid">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="cname">Name</label>
+            <input type="text" id="cname" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="cemail">Email</label>
+            <input type="email" id="cemail" required placeholder="your@email.com">
+          </div>
+          <div class="form-group full-width">
+            <label for="cmsg">Message</label>
+            <textarea id="cmsg" rows="4" required placeholder="How can we help?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <h3>Visit Us</h3>
+          <p>456 Oak Avenue, Suite 2<br>Portland, OR 97201</p>
+          <p>📞 (555) 234-5678</p>
+          <p>✉️ hello@brewandbean.com</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" title="Instagram">📸</a>
+            <a href="#" class="social-icon" title="Facebook">👍</a>
+            <a href="#" class="social-icon" title="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Brew & Bean Coffee House. Made with ❤️ and ☕.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

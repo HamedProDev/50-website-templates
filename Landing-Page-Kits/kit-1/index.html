@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Kit — 5 Hero Layouts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="kit-container">
+    <header class="kit-header">
+      <h1>Hero Layouts <span class="badge">5 Variations</span></h1>
+      <div class="tab-bar" id="tabBar">
+        <button class="tab-btn active" data-layout="0">Centered</button>
+        <button class="tab-btn" data-layout="1">Split</button>
+        <button class="tab-btn" data-layout="2">Fullscreen BG</button>
+        <button class="tab-btn" data-layout="3">Left-Aligned</button>
+        <button class="tab-btn" data-layout="4">Minimal</button>
+      </div>
+    </header>
+
+    <div class="hero-stage" id="heroStage">
+      <!-- Layout 0: Centered -->
+      <section class="hero-layout active" data-layout="0">
+        <div class="hero-centered">
+          <span class="chip">New Launch</span>
+          <h1>Build Products People <span class="highlight">Love</span></h1>
+          <p>Design, build, and ship faster with the most intuitive platform on the market. Start your free trial today.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary">Get Started Free</button>
+            <button class="btn btn-outline">Watch Demo</button>
+          </div>
+          <p class="sub-text">â No credit card required &middot; 14-day free trial</p>
+        </div>
+      </section>
+
+      <!-- Layout 1: Split -->
+      <section class="hero-layout" data-layout="1">
+        <div class="hero-split">
+          <div class="split-text">
+            <h1>Your Data, <span class="highlight">Visualized</span></h1>
+            <p>Transform raw data into actionable insights with beautiful, interactive dashboards that your team will love.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary">Start Free Trial</button>
+              <button class="btn btn-outline">See Examples</button>
+            </div>
+          </div>
+          <div class="split-visual">
+            <div class="mock-chart">
+              <div class="bar" style="height:60%"></div>
+              <div class="bar" style="height:85%"></div>
+              <div class="bar" style="height:45%"></div>
+              <div class="bar" style="height:90%"></div>
+              <div class="bar" style="height:70%"></div>
+              <div class="bar" style="height:55%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layout 2: Fullscreen BG -->
+      <section class="hero-layout" data-layout="2">
+        <div class="hero-fullbg">
+          <div class="hero-fullbg-overlay"></div>
+          <div class="hero-fullbg-content">
+            <h1>Adventure <span class="highlight">Awaits</span></h1>
+            <p>Explore the world's most breathtaking destinations with curated travel experiences.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary">Explore Destinations</button>
+              <button class="btn btn-outline light">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layout 3: Left-Aligned -->
+      <section class="hero-layout" data-layout="3">
+        <div class="hero-left">
+          <div class="hero-left-content">
+            <span class="chip">Productivity Suite</span>
+            <h1>Work Smarter, <span class="highlight">Not Harder</span></h1>
+            <p>Streamline your workflow with AI-powered automation and collaboration tools built for modern teams.</p>
+            <ul class="feature-list">
+              <li>&#10003; Smart task management</li>
+              <li>&#10003; Real-time collaboration</li>
+              <li>&#10003; Advanced analytics</li>
+            </ul>
+            <div class="hero-actions">
+              <button class="btn btn-primary">Get Started</button>
+              <button class="btn btn-outline">Watch Overview</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layout 4: Minimal -->
+      <section class="hero-layout" data-layout="4">
+        <div class="hero-minimal">
+          <p class="hero-label">Minimal / Clean</p>
+          <h1>Less is <span class="highlight">More</span></h1>
+          <p>A simple, distraction-free hero for brands that value clarity and elegance.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary">Get in Touch</button>
+          </div>
+          <div class="minimal-links">
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">About</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

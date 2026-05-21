@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ivy | Boutique Hotel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">The Ivy</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="#suites">Suites</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#attractions">Attractions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="slides" id="heroSlides"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>The Ivy Boutique Hotel</h1>
+      <p>Intimate luxury in the heart of the city</p>
+      <a href="#suites" class="btn btn-primary">Discover Our Suites</a>
+    </div>
+  </section>
+
+  <section id="suites" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Suites</h2>
+      <p class="section-subtitle">Each room is a curated sanctuary</p>
+      <div class="suites-grid" id="suitesGrid"></div>
+    </div>
+  </section>
+
+  <section id="reviews" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Guest Reviews</h2>
+      <div class="carousel" id="reviewCarousel">
+        <div class="carousel-track" id="reviewTrack"></div>
+        <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
+        <button class="carousel-btn next" aria-label="Next">&#10095;</button>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <section id="attractions" class="section">
+    <div class="container">
+      <h2 class="section-title">Nearby Attractions</h2>
+      <div class="attractions-grid" id="attractionsGrid"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>89 The Ivy Lane, Covent Garden<br>London, WC2E 8AB</p>
+          <p>📞 +44 20 7123 4567</p>
+          <p>✉️ stay@theivyhotel.com</p>
+          <a href="#" class="btn btn-primary">Book Direct</a>
+        </div>
+        <div class="map-area"><div class="map-box"><span class="pin"></span><p>89 The Ivy Lane, London</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div><h3>The Ivy</h3><p>&copy; 2026 Boutique Hotel</p></div>
+        <div class="footer-social">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">TripAdvisor</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

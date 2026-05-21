@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Horizon | Luxury Hotel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">Grand Horizon</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="#rooms">Suites</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#booking">Book</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content container">
+      <span class="hero-badge">Since 1926</span>
+      <h1>Experience Unparalleled Luxury</h1>
+      <p>Where timeless elegance meets modern comfort</p>
+      <div class="hero-btns">
+        <a href="#booking" class="btn btn-primary">Book Your Stay</a>
+        <a href="#rooms" class="btn btn-outline">Explore Suites</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="rooms" class="section">
+    <div class="container">
+      <h2 class="section-title">Our Suites</h2>
+      <p class="section-subtitle">Each suite tells a story of refinement</p>
+      <div class="rooms-grid" id="roomsGrid"></div>
+    </div>
+  </section>
+
+  <section id="amenities" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">World-Class Amenities</h2>
+      <div class="amenities-grid" id="amenitiesGrid"></div>
+    </div>
+  </section>
+
+  <section id="booking" class="section">
+    <div class="container">
+      <h2 class="section-title">Book Your Stay</h2>
+      <form class="booking-form" id="bookingForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Check-in</label>
+            <input type="date" id="checkin" required>
+          </div>
+          <div class="form-group">
+            <label>Check-out</label>
+            <input type="date" id="checkout" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Guests</label>
+            <select id="guests">
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4+ Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Room Type</label>
+            <select id="roomType">
+              <option>Deluxe Room</option>
+              <option>Executive Suite</option>
+              <option>Presidential Suite</option>
+              <option>Penthouse</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label>Special Requests</label>
+          <textarea id="requests" rows="3" placeholder="Any special requests..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">Check Availability</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="gallery" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <h3>Grand Horizon Hotel</h3>
+          <p>1 Ocean Boulevard, Beverly Hills<br>California 90210, USA</p>
+          <p>📞 +1 (555) 987-6543</p>
+          <p>✉️ concierge@grandhorizon.com</p>
+        </div>
+        <div class="contact-map"><div class="map-box"><span class="map-pin"></span><p>1 Ocean Blvd, Beverly Hills</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>Grand Horizon</h3>
+        <p>Luxury redefined since 1926</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#">Rooms</a>
+        <a href="#">Dining</a>
+        <a href="#">Spa</a>
+        <a href="#">Events</a>
+      </div>
+      <div class="footer-links">
+        <h4>Support</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Cancellations</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom container"><p>&copy; 2026 Grand Horizon Hotel. All rights reserved.</p></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

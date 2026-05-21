@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Chronicle - News Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div class="container header__top-inner">
+        <span class="header__date" id="currentDate"></span>
+        <div class="header__social">
+          <a href="#">FB</a><a href="#">TW</a><a href="#">IG</a><a href="#">YT</a>
+        </div>
+      </div>
+    </div>
+    <div class="container header__main">
+      <a href="#" class="logo">The Daily Chronicle</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="nav" id="nav">
+      <div class="container nav__inner">
+        <a href="#" class="nav__link">Home</a>
+        <a href="#" class="nav__link">World</a>
+        <a href="#" class="nav__link">Politics</a>
+        <a href="#" class="nav__link">Business</a>
+        <a href="#" class="nav__link">Technology</a>
+        <a href="#" class="nav__link">Science</a>
+        <a href="#" class="nav__link">Sports</a>
+        <a href="#" class="nav__link">Entertainment</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container main-layout">
+    <div class="main-content">
+      <section class="headline-grid">
+        <article class="headline-main">
+          <div class="headline-main__img"></div>
+          <div class="headline-main__body">
+            <span class="tag tag--breaking">Breaking</span>
+            <h2>Global Climate Summit Reaches Historic Agreement on Carbon Emissions</h2>
+            <p>World leaders sign landmark treaty committing to 60% reduction in carbon emissions by 2040, with $100 billion annual fund for developing nations.</p>
+            <div class="meta"><span>By John Anderson</span><span>15 min ago</span></div>
+          </div>
+        </article>
+        <div class="headline-side">
+          <article class="headline-sm">
+            <div class="headline-sm__img" style="background:#2563eb"></div>
+            <div class="headline-sm__body">
+              <span class="tag">Technology</span>
+              <h3>Apple Unveils Next-Gen AI Platform with Privacy Focus</h3>
+              <div class="meta"><span>2 hours ago</span></div>
+            </div>
+          </article>
+          <article class="headline-sm">
+            <div class="headline-sm__img" style="background:#dc2626"></div>
+            <div class="headline-sm__body">
+              <span class="tag">Sports</span>
+              <h3>National Team Secures World Cup Quarterfinal Spot</h3>
+              <div class="meta"><span>4 hours ago</span></div>
+            </div>
+          </article>
+          <article class="headline-sm">
+            <div class="headline-sm__img" style="background:#059669"></div>
+            <div class="headline-sm__body">
+              <span class="tag">Business</span>
+              <h3>Stock Markets Rally on Strong Economic Data</h3>
+              <div class="meta"><span>6 hours ago</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="categories section">
+        <div class="tabs" id="tabs">
+          <button class="tab active" data-cat="latest">Latest</button>
+          <button class="tab" data-cat="world">World</button>
+          <button class="tab" data-cat="tech">Tech</button>
+          <button class="tab" data-cat="sports">Sports</button>
+          <button class="tab" data-cat="business">Business</button>
+        </div>
+        <div class="articles-grid" id="articlesGrid"></div>
+      </section>
+    </div>
+
+    <aside class="sidebar">
+      <div class="sidebar__section">
+        <h3>Trending Now</h3>
+        <div class="trending-list">
+          <div class="trending-item"><span class="trending-num">1</span><div><strong>Climate deal impact on oil prices</strong><span class="trending-meta">12K shares</span></div></div>
+          <div class="trending-item"><span class="trending-num">2</span><div><strong>AI regulation bill passes senate</strong><span class="trending-meta">8.5K shares</span></div></div>
+          <div class="trending-item"><span class="trending-num">3</span><div><strong>Championship finals preview</strong><span class="trending-meta">6.2K shares</span></div></div>
+          <div class="trending-item"><span class="trending-num">4</span><div><strong>Tech earnings season begins</strong><span class="trending-meta">5.1K shares</span></div></div>
+          <div class="trending-item"><span class="trending-num">5</span><div><strong>SpaceX Mars mission update</strong><span class="trending-meta">4.8K shares</span></div></div>
+        </div>
+      </div>
+      <div class="sidebar__section">
+        <h3>Newsletter</h3>
+        <p>Get the top stories delivered daily.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="sidebar__section">
+        <h3>Most Read</h3>
+        <div class="mostread-list">
+          <div class="mostread-item"><span>1</span><p>Global Summit 2026: Key Takeaways</p></div>
+          <div class="mostread-item"><span>2</span><p>New Study Reveals Health Benefits of Plant-Based Diet</p></div>
+          <div class="mostread-item"><span>3</span><p>Interview: Tech CEO on Future of AI</p></div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h3 class="logo">The Daily Chronicle</h3>
+        <p>Your trusted source for news since 1920.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Sections</h4>
+        <a href="#">World</a><a href="#">Politics</a><a href="#">Business</a><a href="#">Tech</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="#">About</a><a href="#">Careers</a><a href="#">Contact</a><a href="#">Advertise</a>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer__bottom"><div class="container">&copy; 2026 The Daily Chronicle. All rights reserved.</div></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
